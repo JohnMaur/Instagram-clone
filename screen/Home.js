@@ -124,236 +124,229 @@ const LongTextWithSeeMore = () => {
 
           </ScrollView>
         </View>
-       
-      {/* Main Content */}
-        <View style={styles.main_container}>
-          <View style={styles.content_view}>
-            <View style={styles.header_content_view}>
-              <View style={styles.name_content_container}>
-                <Image 
-                  style={styles.profile_content_view}
-                  source={require("../img/profile4.jpg")}
-                />
-                <Text style={styles.name_content_view}>Lucy</Text>
-              </View>
-              <Image 
-                style={styles.dotIcon}
-                source={require("../icon/dotIcon.png")}
-              />
-            </View>
-            
-            <Image 
-              style={styles.content}
-              source={require("../img/profile4.jpg")}
-            />
 
-            <View style={styles.bottomIcon_content_container}>
-              <View style={styles.bottomIcon_container}>
-                <TouchableOpacity onPress={toggleLike}>
-                  <Image 
-                    style={[styles.bottomIcon, liked && styles.redHeart]}
-                    source={liked ? require("../icon/red_heart.png") : require("../icon/heart.png")} // Change the heart icon source based on the liked state
-                  />
-                </TouchableOpacity>
+        
+      {/* --------------------------------------Main Content--------------------------------- */}
+        <View style={styles.content_view}>
+          <View style={styles.header_content_view}>
+            <View style={styles.name_content_container}>
+              <Image 
+                style={styles.profile_content_view}
+                source={require("../img/profile4.jpg")}
+              />
+              <Text style={styles.name_content_view}>Lucy</Text>
+            </View>
+            <Image 
+              style={styles.dotIcon}
+              source={require("../icon/dotIcon.png")}
+            />
+          </View>
+          
+          <Image 
+            style={styles.content}
+            source={require("../img/profile4.jpg")}
+          />
+
+          <View style={styles.bottomIcon_content_container}>
+            <View style={styles.bottomIcon_container}>
+              <TouchableOpacity onPress={toggleLike}>
                 <Image 
-                  style={styles.bottomIcon}
-                  source={require("../icon/speech-bubble.png")}
+                  style={[styles.bottomIcon, liked && styles.redHeart]}
+                  source={liked ? require("../icon/red_heart.png") : require("../icon/heart.png")} // Change the heart icon source based on the liked state
                 />
-                <Image 
-                  style={styles.bottomIcon}
-                  source={require("../icon/send.png")}
-                />
-              </View>
+              </TouchableOpacity>
               <Image 
                 style={styles.bottomIcon}
-                source={require("../icon/bookmark.png")}
+                source={require("../icon/speech-bubble.png")}
+              />
+              <Image 
+                style={styles.bottomIcon}
+                source={require("../icon/send.png")}
               />
             </View>
+            <Image 
+              style={styles.bottomIcon}
+              source={require("../icon/bookmark.png")}
+            />
           </View>
+
           <View style={styles.bottomContext}>
             <Text style={styles.likesCounter}>{likesCount} Likes</Text>
             <TouchableOpacity onPress={toggleTextVisibility}>
-            <View style={styles.seeMoreButton}>
               <Text>
                 {showFullText ? textContent : textContent.substring(0, 50) + "... "}
                 {showFullText ? "See less" : "See more"}
               </Text>
-            </View>
             </TouchableOpacity>
           </View>
-
         </View>
-
-        {/* Add more content views here */}
-
-        <View style={styles.main_container}>
-          <View style={styles.content_view}>
-            <View style={styles.header_content_view}>
-              <View style={styles.name_content_container}>
-                <Image 
-                  style={styles.profile_content_view}
-                  source={require("../img/profile2.jpg")}
-                />
-                <Text style={styles.name_content_view}>Max</Text>
-              </View>
+        
+  {/* --------------------------------------Main Content--------------------------------- */}
+        <View style={styles.content_view}>
+          <View style={styles.header_content_view}>
+            <View style={styles.name_content_container}>
               <Image 
-                style={styles.dotIcon}
-                source={require("../icon/dotIcon.png")}
+                style={styles.profile_content_view}
+                source={require("../img/profile2.jpg")}
               />
+              <Text style={styles.name_content_view}>Max</Text>
             </View>
-            
             <Image 
-              style={styles.content}
-              source={require("../img/profile2.jpg")}
+              style={styles.dotIcon}
+              source={require("../icon/dotIcon.png")}
             />
+          </View>
+          
+          <Image 
+            style={styles.content}
+            source={require("../img/profile2.jpg")}
+          />
 
-            <View style={styles.bottomIcon_content_container}>
-              <View style={styles.bottomIcon_container}>
-                <TouchableOpacity onPress={toggleLike}>
-                  <Image 
-                    style={[styles.bottomIcon, liked && styles.redHeart]}
-                    source={liked ? require("../icon/red_heart.png") : require("../icon/heart.png")} // Change the heart icon source based on the liked state
-                  />
-                </TouchableOpacity>
+          <View style={styles.bottomIcon_content_container}>
+            <View style={styles.bottomIcon_container}>
+              <TouchableOpacity onPress={toggleLike}>
                 <Image 
-                  style={styles.bottomIcon}
-                  source={require("../icon/speech-bubble.png")}
+                  style={[styles.bottomIcon, liked && styles.redHeart]}
+                  source={liked ? require("../icon/red_heart.png") : require("../icon/heart.png")} // Change the heart icon source based on the liked state
                 />
-                <Image 
-                  style={styles.bottomIcon}
-                  source={require("../icon/send.png")}
-                />
-              </View>
+              </TouchableOpacity>
               <Image 
                 style={styles.bottomIcon}
-                source={require("../icon/bookmark.png")}
+                source={require("../icon/speech-bubble.png")}
               />
-            </View>
-          </View>
-          <View style={styles.bottomContext}>
-            <Text style={styles.likesCounter}>100 Likes</Text>
-            <Text>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Mauris suscipit purus id tortor interdum, eget placerat quam gravida.
-              </Text>
-          </View>
-        </View>
-
-        <View style={styles.main_container}>
-          <View style={styles.content_view}>
-            <View style={styles.header_content_view}>
-              <View style={styles.name_content_container}>
-                <Image 
-                  style={styles.profile_content_view}
-                  source={require("../img/profile5.jpg")}
-                />
-                <Text style={styles.name_content_view}>Oliver</Text>
-              </View>
-              <Image 
-                style={styles.dotIcon}
-                source={require("../icon/dotIcon.png")}
-              />
-            </View>
-            
-            <Image 
-              style={styles.content}
-              source={require("../img/profile5.jpg")}
-            />
-
-            <View style={styles.bottomIcon_content_container}>
-              <View style={styles.bottomIcon_container}>
-                <TouchableOpacity onPress={toggleLike}>
-                  <Image 
-                    style={[styles.bottomIcon, liked && styles.redHeart]}
-                    source={liked ? require("../icon/red_heart.png") : require("../icon/heart.png")} // Change the heart icon source based on the liked state
-                  />
-                </TouchableOpacity>
-                <Image 
-                  style={styles.bottomIcon}
-                  source={require("../icon/speech-bubble.png")}
-                />
-                <Image 
-                  style={styles.bottomIcon}
-                  source={require("../icon/send.png")}
-                />
-              </View>
               <Image 
                 style={styles.bottomIcon}
-                source={require("../icon/bookmark.png")}
+                source={require("../icon/send.png")}
               />
             </View>
+            <Image 
+              style={styles.bottomIcon}
+              source={require("../icon/bookmark.png")}
+            />
           </View>
+
           <View style={styles.bottomContext}>
-            <Text style={styles.likesCounter}>100 Likes</Text>
+            <Text style={styles.likesCounter}>{likesCount} Likes</Text>
             <TouchableOpacity onPress={toggleTextVisibility}>
-            <View style={styles.seeMoreButton}>
               <Text>
                 {showFullText ? textContent : textContent.substring(0, 50) + "... "}
                 {showFullText ? "See less" : "See more"}
               </Text>
-            </View>
             </TouchableOpacity>
           </View>
-
         </View>
 
-        <View style={styles.main_container}>
-          <View style={styles.content_view}>
-            <View style={styles.header_content_view}>
-              <View style={styles.name_content_container}>
-                <Image 
-                  style={styles.profile_content_view}
-                  source={require("../img/profile3.jpg")}
-                />
-                <Text style={styles.name_content_view}>Luna</Text>
-              </View>
+{/* --------------------------------------Main Content--------------------------------- */}
+        <View style={styles.content_view}>
+          <View style={styles.header_content_view}>
+            <View style={styles.name_content_container}>
               <Image 
-                style={styles.dotIcon}
-                source={require("../icon/dotIcon.png")}
+                style={styles.profile_content_view}
+                source={require("../img/profile3.jpg")}
               />
+              <Text style={styles.name_content_view}>Luna</Text>
             </View>
-            
             <Image 
-              style={styles.content}
-              source={require("../img/profile3.jpg")}
+              style={styles.dotIcon}
+              source={require("../icon/dotIcon.png")}
             />
+          </View>
+          
+          <Image 
+            style={styles.content}
+            source={require("../img/profile3.jpg")}
+          />
 
-            <View style={styles.bottomIcon_content_container}>
-              <View style={styles.bottomIcon_container}>
-                <TouchableOpacity onPress={toggleLike}>
-                  <Image 
-                    style={[styles.bottomIcon, liked && styles.redHeart]}
-                    source={liked ? require("../icon/red_heart.png") : require("../icon/heart.png")} // Change the heart icon source based on the liked state
-                  />
-                </TouchableOpacity>
+          <View style={styles.bottomIcon_content_container}>
+            <View style={styles.bottomIcon_container}>
+              <TouchableOpacity onPress={toggleLike}>
                 <Image 
-                  style={styles.bottomIcon}
-                  source={require("../icon/speech-bubble.png")}
+                  style={[styles.bottomIcon, liked && styles.redHeart]}
+                  source={liked ? require("../icon/red_heart.png") : require("../icon/heart.png")} // Change the heart icon source based on the liked state
                 />
-                <Image 
-                  style={styles.bottomIcon}
-                  source={require("../icon/send.png")}
-                />
-              </View>
+              </TouchableOpacity>
               <Image 
                 style={styles.bottomIcon}
-                source={require("../icon/bookmark.png")}
+                source={require("../icon/speech-bubble.png")}
+              />
+              <Image 
+                style={styles.bottomIcon}
+                source={require("../icon/send.png")}
               />
             </View>
+            <Image 
+              style={styles.bottomIcon}
+              source={require("../icon/bookmark.png")}
+            />
           </View>
+
           <View style={styles.bottomContext}>
-            <Text style={styles.likesCounter}>100 Likes</Text>
+            <Text style={styles.likesCounter}>{likesCount} Likes</Text>
             <TouchableOpacity onPress={toggleTextVisibility}>
-            <View style={styles.seeMoreButton}>
               <Text>
                 {showFullText ? textContent : textContent.substring(0, 50) + "... "}
                 {showFullText ? "See less" : "See more"}
               </Text>
-            </View>
             </TouchableOpacity>
           </View>
-
         </View>
 
+    {/* --------------------------------------Main Content--------------------------------- */}
+        <View style={styles.content_view}>
+          <View style={styles.header_content_view}>
+            <View style={styles.name_content_container}>
+              <Image 
+                style={styles.profile_content_view}
+                source={require("../img/profile5.jpg")}
+              />
+              <Text style={styles.name_content_view}>Oliver</Text>
+            </View>
+            <Image 
+              style={styles.dotIcon}
+              source={require("../icon/dotIcon.png")}
+            />
+          </View>
+          
+          <Image 
+            style={styles.content}
+            source={require("../img/profile5.jpg")}
+          />
+
+          <View style={styles.bottomIcon_content_container}>
+            <View style={styles.bottomIcon_container}>
+              <TouchableOpacity onPress={toggleLike}>
+                <Image 
+                  style={[styles.bottomIcon, liked && styles.redHeart]}
+                  source={liked ? require("../icon/red_heart.png") : require("../icon/heart.png")} // Change the heart icon source based on the liked state
+                />
+              </TouchableOpacity>
+              <Image 
+                style={styles.bottomIcon}
+                source={require("../icon/speech-bubble.png")}
+              />
+              <Image 
+                style={styles.bottomIcon}
+                source={require("../icon/send.png")}
+              />
+            </View>
+            <Image 
+              style={styles.bottomIcon}
+              source={require("../icon/bookmark.png")}
+            />
+          </View>
+
+          <View style={styles.bottomContext}>
+            <Text style={styles.likesCounter}>{likesCount} Likes</Text>
+            <TouchableOpacity onPress={toggleTextVisibility}>
+              <Text>
+                {showFullText ? textContent : textContent.substring(0, 50) + "... "}
+                {showFullText ? "See less" : "See more"}
+              </Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+
+        
       </ScrollView>
     </SafeAreaView>
   );
